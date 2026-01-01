@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>confetti</title>
+    <style>
+        body {
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #ffffcc;
+        }
+        .confetti-piece {
+            position: absolute;
+            width: 15px; height: 5px; /* 短冊みたいな */
+            pointer-events: none;
+            will-change: transform; /* パフォーマンス向上 */
+        }
+    </style>
+    <script src="confetti.js"></script>
+</head>
+<body>
+    <h1 style="text-align: center;">紙吹雪</h1>
+
+    <script>
+        const myConfetti = new Confetti({
+            count: 120,
+            colors: ['#FF5722', '#FFC107', '#8BC34A', '#03A9F4']
+        });
+
+        // アニメーション開始
+        myConfetti.start();
+    </script>
+</body>
+</html>
